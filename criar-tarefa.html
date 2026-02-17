@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Tarefa - Gestão de Supermercados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <header class="dashboard-header">
+            <div class="header-titulo">Gestão de Tarefas - Supermercados</div>
+            <nav class="header-menu">
+                <a href="#">Suporte</a>
+                <a href="index.html">logout</a>
+            </nav>
+        </header>
+
+        <div class="dashboard-corpo">
+            
+            <aside class="dashboard-sidebar">
+                <a href="tarefas.html" class="btn-menu ativo">Tarefas</a>
+                <a href="perfil.html" class="btn-menu">Meu perfil</a>
+                <a href="funcionarios.html" class="btn-menu">Funcionários</a>
+            </aside>
+
+            <main class="dashboard-conteudo">
+                
+                <div class="painel-formulario">
+                    <form class="form-grid">
+                        
+                        <div class="campo-grupo">
+                            <label for="nome">Nome da Tarefa</label>
+                            <input type="text" id="nome">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="desc">Descrição</label>
+                            <input type="text" id="desc">
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo-grupo">
+                                <label for="prioridade">Prioridade</label>
+                                <input type="text" id="prioridade">
+                            </div>
+                            <div class="campo-grupo">
+                                <label for="prazo">Prazo</label>
+                                <input type="text" id="prazo">
+                            </div>
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo-grupo">
+                                <label for="setor">Setor</label>
+                                <input type="text" id="setor">
+                            </div>
+                            <div class="campo-grupo">
+                                <label for="foto">Exige Foto</label>
+                                <input type="text" id="foto">
+                            </div>
+                        </div>
+
+                        <div class="rodape-form">
+                            <a href="tarefas.html" class="btn-form btn-cancelar">Cancelar</a>
+                            <button type="submit" class="btn-form btn-criar">Criar</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+</body>
+</html>

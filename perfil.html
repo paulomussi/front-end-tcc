@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Gestão de Supermercados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <header class="dashboard-header">
+            <div class="header-titulo">Gestão de Tarefas - Supermercados</div>
+            <nav class="header-menu">
+                <a href="#">Suporte</a>
+                <a href="index.html">logout</a>
+            </nav>
+        </header>
+
+        <div class="dashboard-corpo">
+            
+            <aside class="dashboard-sidebar">
+                <a href="tarefas.html" class="btn-menu">Tarefas</a>
+                <a href="perfil.html" class="btn-menu ativo">Meu perfil</a>
+                <a href="funcionarios.html" class="btn-menu">Funcionários</a>
+            </aside>
+
+            <main class="dashboard-conteudo">
+                
+                <div class="painel-perfil">
+                    
+                    <div class="topo-perfil">
+                        <div class="foto-placeholder">
+                            </div>
+                        <button class="btn-sair-interno">Sair</button>
+                    </div>
+
+                    <form class="form-perfil">
+                        <div class="campo-perfil full-width">
+                            <label>Nome</label>
+                            <input type="text" readonly value="Nome do Usuário">
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo-perfil">
+                                <label>Setor</label>
+                                <input type="text" readonly value="Hortifruti">
+                            </div>
+                            <div class="campo-perfil">
+                                <label>Cargo</label>
+                                <input type="text" readonly value="Gerente">
+                            </div>
+                        </div>
+
+                        <div class="campo-perfil full-width">
+                            <label>Email</label>
+                            <input type="email" readonly value="usuario@supermercado.com">
+                        </div>
+                    </form>
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+</body>
+</html>

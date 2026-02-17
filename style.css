@@ -1,0 +1,653 @@
+/* --- Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Layout Principal --- */
+.pagina-login {
+    /* Fundo cinza claro para destacar a caixa de login no centro */
+    background-color: #e5e5e5; 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao-login {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 60px 40px;
+    /* Opcional: Adicionei uma bordinha bem sutil para imitar a sua imagem */
+    border: 1px solid #dcdcdc; 
+}
+
+/* --- Formulário e Inputs --- */
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaço entre os blocos de usuário e senha */
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaço entre o texto e a caixa cinza */
+}
+
+.grupo-input label {
+    font-size: 18px;
+    color: #000000;
+}
+
+.grupo-input input {
+    background-color: #d9d9d9; /* Cor da caixa cinza do seu protótipo */
+    border: none;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+/* Borda ao clicar no input (bom para acessibilidade) */
+.grupo-input input:focus {
+    outline: 2px solid #a9a9a9;
+}
+
+/* --- Ações (Esqueci a senha e Entrar) --- */
+.acoes-login {
+    display: flex;
+    justify-content: space-between; /* Joga um item para cada lado */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.link-esqueceu {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+.link-esqueceu:hover {
+    text-decoration: underline;
+}
+
+.btn-entrar {
+    background: transparent;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-entrar:hover {
+    text-decoration: underline;
+}
+
+/* --- Layout Geral do Dashboard --- */
+.dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa 100% da altura da tela */
+    background-color: #ffffff;
+}
+
+/* --- Cabeçalho (Header) --- */
+.dashboard-header {
+    background-color: #d9d9d9; /* Cinza do seu desenho */
+    display: flex;
+    justify-content: space-between; /* Texto de um lado, links do outro */
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.header-titulo {
+    font-size: 16px;
+    color: #000;
+}
+
+.header-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+/* --- Corpo (Menu Lateral + Conteúdo) --- */
+.dashboard-corpo {
+    display: flex;
+    flex: 1; /* Faz essa área crescer e ocupar o resto da tela abaixo do header */
+}
+
+/* --- Menu Lateral (Sidebar) --- */
+.dashboard-sidebar {
+    width: 200px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os botões */
+    border-right: 1px solid #f0f0f0; /* Uma linha bem suave pra separar */
+}
+
+.btn-menu {
+    background-color: #d9d9d9;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 10px; /* Bordas arredondadas como na sua imagem */
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-menu:hover {
+    background-color: #c5c5c5; /* Escurece um pouquinho ao passar o mouse */
+}
+
+/* --- Conteúdo Principal (Onde ficam os gráficos) --- */
+.dashboard-conteudo {
+    flex: 1; /* Ocupa o resto do espaço à direita do menu */
+    padding: 50px;
+    display: flex;
+    gap: 30px; /* Espaço entre os gráficos */
+    align-items: flex-start;
+}
+
+.cartao-grafico {
+    background-color: #d9d9d9;
+    width: 140px; /* Largura do quadrado */
+    height: 140px; /* Altura do quadrado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    line-height: 1.5; /* Espaçamento entre as linhas do texto */
+}
+
+/* --- Atualização do Menu Lateral --- */
+.btn-menu {
+    /* Como mudamos para a tag <a>, precisamos tirar o sublinhado e ajustar o display */
+    text-decoration: none;
+    display: block; 
+}
+
+/* Classe para o botão da página que estamos acessando */
+.btn-menu.ativo {
+    background-color: #c4ca8a; /* A cor amarelo/esverdeada do seu desenho */
+}
+
+/* --- Painel de Tarefas (A caixa cinza grande) --- */
+.painel-tarefas {
+    background-color: #d9d9d9;
+    padding: 20px;
+    width: 100%;
+    max-width: 750px; /* Limita a largura para ficar parecido com a imagem */
+}
+
+/* --- Barra de Ferramentas (Inputs e Botões do topo) --- */
+.barra-ferramentas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.input-busca, .select-filtro {
+    border: none;
+    height: 30px;
+    padding: 0 10px;
+}
+
+.input-busca {
+    flex: 1; /* Faz o input de texto crescer e ocupar o espaço disponível */
+}
+
+.select-filtro {
+    width: 60px;
+}
+
+.btn-icone {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-branco {
+    background-color: #ffffff;
+    height: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+/* --- Lista de Tarefas --- */
+.lista-tarefas {
+    list-style: none; /* Tira as bolinhas padrão do HTML */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre cada tarefa */
+}
+
+.item-tarefa {
+    display: flex;
+    justify-content: space-between; /* Texto na esquerda, ícones na direita */
+    align-items: center;
+}
+
+.nome-tarefa {
+    font-size: 14px;
+    color: #000;
+}
+
+/* --- Ações da Tarefa (Lápis e Excluir) --- */
+.acoes-tarefa {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-acao-icone {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Criando o círculo vermelho com o X no meio com CSS puro */
+.btn-acao-excluir {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Transforma o quadrado em círculo */
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Ajustes para a tela de Funcionários --- */
+
+.info-funcionario {
+    display: flex;
+    gap: 40px; /* Espaço entre o nome e o email */
+    flex: 1; /* Garante que as informações ocupem o lado esquerdo */
+}
+
+.nome-txt {
+    font-size: 14px;
+    width: 150px; /* Largura fixa opcional para manter os emails alinhados */
+}
+
+.email-txt {
+    font-size: 14px;
+    color: #444; /* Um cinza um pouco mais escuro para o email */
+}
+
+/* Dica: se o email não couber em telas pequenas, o flex-wrap ajuda */
+@media (max-width: 600px) {
+    .info-funcionario {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* --- Estilos da Tela de Perfil --- */
+
+.painel-perfil {
+    background-color: #d9d9d9;
+    padding: 30px;
+    width: 100%;
+    max-width: 750px;
+    position: relative;
+}
+
+.topo-perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.foto-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #f5f5f5; /* Cor clarinha da foto no seu desenho */
+    border: 1px solid #ccc;
+}
+
+.btn-sair-interno {
+    background-color: #a9a9a9;
+    border: none;
+    padding: 5px 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Organização dos Inputs */
+.form-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-perfil label {
+    font-size: 14px;
+    min-width: 40px;
+}
+
+.campo-perfil input {
+    background-color: #f5f5f5;
+    border: none;
+    height: 25px;
+    padding: 0 10px;
+    flex: 1; /* O input ocupa o resto do espaço */
+}
+
+/* Faz Setor e Cargo ficarem na mesma linha */
+.linha-dupla {
+    display: flex;
+    gap: 20px;
+}
+
+.linha-dupla .campo-perfil {
+    flex: 1;
+}
+
+.full-width input {
+    width: 100%;
+}
+
+/* --- Estilos da Tela Criar Tarefa --- */
+
+.painel-formulario {
+    background-color: #d9d9d9;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; /* Um pouco mais largo para caber as colunas */
+}
+
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-grupo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-grupo label {
+    font-size: 13px;
+    width: 110px; /* Tamanho fixo para alinhar todos os labels */
+    text-align: left;
+}
+
+.campo-grupo input {
+    flex: 1;
+    height: 25px;
+    border: none;
+    background-color: #ffffff;
+    padding: 0 10px;
+}
+
+/* Reutilizando a linha dupla para campos menores */
+.linha-dupla {
+    display: flex;
+    gap: 20px;
+}
+
+.linha-dupla .campo-grupo {
+    flex: 1;
+}
+
+/* Botões Inferiores */
+.rodape-form {
+    display: flex;
+    justify-content: space-around; /* Distribui os botões como no desenho */
+    margin-top: 30px;
+}
+
+.btn-form {
+    background-color: #ffffff;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 15px; /* Bordas bem arredondadas */
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.2s;
+}
+
+.btn-form:hover {
+    background-color: #f0f0f0;
+}
+
+/* Centralizando o conteúdo principal no meio da tela */
+.dashboard-conteudo {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha no topo com um respiro */
+    padding: 40px;
+    background-color: #f5f5f5; /* Um fundo leve para destacar suas caixas cinzas */
+}
+
+/* Refinando as suas caixas cinzas originais */
+.painel-tarefas, .painel-formulario, .painel-perfil {
+    background-color: #d9d9d9; /* Mantendo sua cor original */
+    border-radius: 8px; /* Apenas um leve arredondado para não parecer "quadradão" */
+    padding: 30px;
+    width: 100%;
+    max-width: 700px; /* Limita a largura para não espalhar demais em telas grandes */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05); /* Sombra quase invisível só para dar profundidade */
+}
+
+/* Centralizando os gráficos no Dashboard */
+.dashboard-conteudo.grid-graficos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Se a tela for pequena, um gráfico vai para baixo do outro */
+}
+
+:root {
+    --bg-fundo: #f4f7f6;        /* Cinza bem clarinho para o fundo da tela */
+    --bg-painel: #d4d3d369;       /* Branco para os cartões/painéis */
+    --sidebar-bg: #2c3e50;      /* Azul escuro profissional para o menu lateral */
+    --texto-menu: #ecf0f1;      /* Texto claro para o menu escuro */
+    --cor-destaque: #8eb057;    /* Verde oliva suave (substitui o seu amarelo/verde) */
+    --cor-borda: #dcdde1;       /* Cinza para linhas e divisórias */
+    --cor-input: #f9f9f9;       /* Fundo dos campos de digitação */
+}
+
+/* --- Ajuste Geral --- */
+body {
+    background-color: var(--bg-fundo);
+    color: #333;
+}
+
+/* --- Header --- */
+.dashboard-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--cor-destaque);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- Menu Lateral (Sidebar) --- */
+.dashboard-sidebar {
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+}
+
+.btn-menu {
+    background-color: rgba(255, 255, 255, 0.1); /* Botão semi-transparente */
+    color: var(--texto-menu);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.btn-menu:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+.btn-menu.ativo {
+    background-color: var(--cor-destaque);
+    color: white;
+    font-weight: bold;
+}
+
+/* --- Painéis (As caixas cinzas agora ficam profissionais) --- */
+.painel-tarefas, .painel-formulario, .painel-perfil, .cartao-login {
+    background-color: var(--bg-painel);
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra bem leve */
+}
+
+/* --- Inputs --- */
+input, select {/* --- Ajuste Geral --- */
+body {
+    background-color: var(--bg-fundo);
+    color: #333;
+}
+
+/* --- Header --- */
+.dashboard-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--cor-destaque);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- Menu Lateral (Sidebar) --- */
+.dashboard-sidebar {
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+}
+
+.btn-menu {
+    background-color: rgba(255, 255, 255, 0.1); /* Botão semi-transparente */
+    color: var(--texto-menu);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.btn-menu:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+.btn-menu.ativo {
+    background-color: var(--cor-destaque);
+    color: white;
+    font-weight: bold;
+}
+
+/* --- Painéis (As caixas cinzas agora ficam profissionais) --- */
+.painel-tarefas, .painel-formulario, .painel-perfil, .cartao-login {
+    background-color: var(--bg-painel);
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra bem leve */
+}
+
+/* --- Inputs --- */
+input, select {
+    background-color: var(--cor-input);
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    color: #444;
+}
+
+input:focus {
+    border-color: var(--cor-destaque);
+    background-color: #fff;
+}
+
+/* --- Botões Criar / Cancelar --- */
+.btn-criar {
+    background-color: var(--cor-destaque) !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.btn-cancelar {
+    background-color: #e74c3c !important; /* Vermelho suave para cancelar */
+    color: white !important;
+}
+
+/* --- Itens da Lista (Tarefas/Funcionários) --- */
+.item-tarefa {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.item-tarefa:last-child {
+    border-bottom: none;
+}
+    background-color: var(--cor-input);
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    color: #444;
+}
+
+input:focus {
+    border-color: var(--cor-destaque);
+    background-color: #fff;
+}
+
+/* --- Botões Criar / Cancelar --- */
+.btn-criar {
+    background-color: var(--cor-destaque) !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.btn-cancelar {
+    background-color: #e74c3c !important; /* Vermelho suave para cancelar */
+    color: white !important;
+}
+
+/* --- Itens da Lista (Tarefas/Funcionários) --- */
+.item-tarefa {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.item-tarefa:last-child {
+    border-bottom: none;
+}
