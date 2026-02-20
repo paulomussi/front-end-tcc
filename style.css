@@ -489,7 +489,7 @@ body {
     --bg-painel: #d4d3d369;       /* Branco para os cartões/painéis */
     --sidebar-bg: #2c3e50;      /* Azul escuro profissional para o menu lateral */
     --texto-menu: #ecf0f1;      /* Texto claro para o menu escuro */
-    --cor-destaque: #8eb057;    /* Verde oliva suave (substitui o seu amarelo/verde) */
+    --cor-destaque: #1c8ca0;    /* Verde oliva suave (substitui o seu amarelo/verde) */
     --cor-borda: #dcdde1;       /* Cinza para linhas e divisórias */
     --cor-input: #f9f9f9;       /* Fundo dos campos de digitação */
 }
